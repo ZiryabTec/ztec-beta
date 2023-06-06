@@ -55,9 +55,11 @@ class InvalidEmail extends Notification implements ShouldQueue
 
         return (new MailMessage)
             ->subject(trans('notifications.email.invalid.title', ['type' => $this->type]))
-            ->line(new HtmlString('<br><br>'))
+            ->line(new HtmlString('<br>'))
+            ->line(new HtmlString('<br>'))
             ->line(trans('notifications.email.invalid.description', ['email' => $this->email]))
-            ->line(new HtmlString('<br><br>'))
+            ->line(new HtmlString('<br>'))
+            ->line(new HtmlString('<br>'))
             ->line(new HtmlString('<i>' . $this->error . '</i>'))
             ->action(trans_choice('general.dashboards', 1), $dashboard_url);
     }

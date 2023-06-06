@@ -79,4 +79,57 @@ class Modules extends Controller
 
         return response()->json($response);
     }
+
+//     /**
+//      * Enable the specified resource.
+//      *
+//      * @param  string  $alias
+//      * @return \Illuminate\Http\JsonResponse
+//      */
+//     public function enable($alias)
+//     {
+//         $module = module($alias);
+
+//         if ($module) {
+//             $module->enabled = true;
+//             $module->save();
+
+//             return response()->json([
+//                 'success' => true,
+//                 'message' => 'Module enabled successfully.',
+//             ]);
+//         }
+
+//         return response()->json([
+//             'success' => false,
+//             'message' => 'Module not found.',
+//         ]);
+//     }
+
+//     /**
+//  * Disable the specified resource.
+//  *
+//  * @param  string  $alias
+//  * @return \Illuminate\Http\JsonResponse
+//  */
+// public function disable($alias)
+// {
+//     $module = module($alias);
+
+//     if ($module) {
+//         $module->enabled = false;
+//         $module->save();
+
+//         return response()->json([
+//             'success' => true,
+//             'message' => 'Module disabled successfully.',
+//         ]);
+//     }
+
+//     return response()->json([
+//         'success' => false,
+//         'message' => 'Module not found.',
+//     ]);
+// }
+
 }

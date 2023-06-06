@@ -59,7 +59,7 @@ class CreateUser extends Job implements HasOwner, HasSource, ShouldCreate
                     }
                 }
             }
-
+    
             if (empty($this->model->companies)) {
                 return;
             }

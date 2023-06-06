@@ -40,21 +40,7 @@ class Database extends Controller
         $username = $request['username'];
         $password = $request['password'];
 
-        // Check database connection
-        if (!Installer::createDbTables($host, $port, $database, $username, $password)) {
-            $response = [
-                'status' => null,
-                'success' => false,
-                'error' => true,
-                'message' => trans('install.error.connection'),
-                'data' => null,
-                'redirect' => null,
-            ];
-        }
-
-        if (empty($response)) {
-            $response['redirect'] = route('install.settings');
-        }
+        $response['redirect'] = route('install.settings');
 
         return response()->json($response);
     }

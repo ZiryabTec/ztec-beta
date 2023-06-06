@@ -248,6 +248,7 @@ class Installer
 
     public static function createUser($email, $password, $locale)
     {
+        
         dispatch_sync(new CreateUser([
             'name' => '',
             'email' => $email,

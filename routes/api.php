@@ -81,4 +81,8 @@ Route::group(['as' => 'api.'], function () {
     // Translations
     Route::get('translations/{locale}/all', 'Common\Translations@all')->name('translations.all');
     Route::get('translations/{locale}/{file}', 'Common\Translations@file')->name('translations.file');
+
+
+    //added this
+    Route::get('/calendar/events', [CalendarController::class, 'events'])->name('calendar.events');
 });

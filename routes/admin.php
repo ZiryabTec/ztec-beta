@@ -162,6 +162,12 @@ Route::group(['prefix' => 'settings'], function () {
     Route::get('categories/export', 'Settings\Categories@export')->name('categories.export');
     Route::resource('categories', 'Settings\Categories');
 
+    // Route::get('modules/{module}/enable', 'Settings\Modules@enable')->name('modules.enable');
+    // Route::get('modules/{module}/disable', 'Settings\Modules@disable')->name('modules.disable');
+    // Route::post('modules/import', 'Settings\Modules@import')->middleware('import')->name('modules.import');
+    // Route::get('modules/export', 'Settings\Modules@export')->name('modules.export');
+    // Route::resource('modules', 'Settings\Modules');
+
     Route::get('currencies/config', 'Settings\Currencies@config')->name('currencies.config');
     Route::get('currencies/{currency}/enable', 'Settings\Currencies@enable')->name('currencies.enable');
     Route::get('currencies/{currency}/disable', 'Settings\Currencies@disable')->name('currencies.disable');

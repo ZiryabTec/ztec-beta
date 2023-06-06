@@ -6,7 +6,6 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Notification;
 use Illuminate\Notifications\Messages\MailMessage;
-use Illuminate\Support\HtmlString;
 
 class ExportCompleted extends Notification implements ShouldQueue
 {
@@ -53,7 +52,6 @@ class ExportCompleted extends Notification implements ShouldQueue
     {
         return (new MailMessage)
             ->subject(trans('notifications.export.completed.title'))
-            ->line(new HtmlString('<br><br>'))
             ->line(trans('notifications.export.completed.description'))
             ->action(trans('general.download'), $this->download_url);
     }
